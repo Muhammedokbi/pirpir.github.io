@@ -44,6 +44,32 @@
             border-radius: 5px;
             box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
         }
+        .image-gallery {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+            position: relative;
+        }
+        .image-gallery img {
+            width: 23%; /* Toplam genişlik 4 resmin toplam genişliği olacak şekilde ayarlanmalıdır */
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+        .prev, .next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(255, 255, 255, 0.5);
+            padding: 10px;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        .prev {
+            left: 10px;
+        }
+        .next {
+            right: 10px;
+        }
     </style>
 </head>
 <body>
@@ -72,5 +98,33 @@
             <p>Bu proje, toplu etkinliklerin ve kamusal alanların güvenliğini artırmak için yenilikçi bir çözüm sunmaktadır. Ayrıca, uygulama alanları ve donanım detayları, projenin potansiyel etkisini ve kullanımını daha iyi anlamamıza yardımcı olur.</p>
         </div>
     </div>
+    <div class="image-gallery">
+        <img src="resim_1.jpg" alt="Resim 1">
+        <img src="resim_2.jpg" alt="Resim 2">
+        <img src="resim_3.jpg" alt="Resim 3">
+        <img src="resim_4.jpg" alt="Resim 4">
+        <div class="prev" onclick="plusSlides(-1)">&#10094;</div>
+        <div class="next" onclick="plusSlides(1)">&#10095;</div>
+    </div>
+
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("image-gallery")[0].getElementsByTagName("img");
+            if (n > slides.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slides[slideIndex-1].style.display = "block";
+        }
+    </script>
 </body>
 </html>
