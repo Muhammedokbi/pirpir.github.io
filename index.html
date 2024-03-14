@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>robik</title>
+    <title>👾 ・ robik</title>
+    <link rel="icon" href="assets/imgs/resim_adı.jpg">
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -44,14 +45,18 @@
             border-radius: 5px;
             box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
         }
+        .image-gallery-container {
+            max-width: 800px;
+            margin: 20px auto;
+            text-align: center; /* Resim galerisini ortala */
+            position: relative;
+        }
         .image-gallery {
-            display: flex;
-            justify-content: space-between;
-            margin-top: 20px;
+            display: inline-block; /* Resimlerin yan yana olmasını sağla */
             position: relative;
         }
         .image-gallery img {
-            width: 23%; /* Toplam genişlik 4 resmin toplam genişliği olacak şekilde ayarlanmalıdır */
+            width: 100%; /* Resimlerin tam genişlikte olmasını sağla */
             border-radius: 5px;
             box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
         }
@@ -63,12 +68,14 @@
             padding: 10px;
             border-radius: 50%;
             cursor: pointer;
+            font-size: 24px; /* Okun boyutunu ayarlayın */
+            color: #333; /* Okun rengini ayarlayın */
         }
         .prev {
-            left: 10px;
+            left: 0; /* Sol kenara yapışık */
         }
         .next {
-            right: 10px;
+            right: 0; /* Sağ kenara yapışık */
         }
     </style>
 </head>
@@ -98,15 +105,18 @@
             <p>Bu proje, toplu etkinliklerin ve kamusal alanların güvenliğini artırmak için yenilikçi bir çözüm sunmaktadır. Ayrıca, uygulama alanları ve donanım detayları, projenin potansiyel etkisini ve kullanımını daha iyi anlamamıza yardımcı olur.</p>
         </div>
     </div>
-    <div class="image-gallery">
-        <img src="resim_1.jpg" alt="Resim 1">
-        <img src="resim_2.jpg" alt="Resim 2">
-        <img src="resim_3.jpg" alt="Resim 3">
-        <img src="resim_4.jpg" alt="Resim 4">
-        <div class="prev" onclick="plusSlides(-1)">&#10094;</div>
-        <div class="next" onclick="plusSlides(1)">&#10095;</div>
+    
+    <div class="image-gallery-container">
+        <div class="image-gallery">
+            <img src="resim_1.jpg" alt="Resim 1" style="display: block;">
+            <img src="resim_2.jpg" alt="Resim 2" style="display: none;">
+            <img src="resim_3.jpg" alt="Resim 3" style="display: none;">
+            <img src="resim_4.jpg" alt="Resim 4" style="display: none;">
+            <div class="prev" onclick="plusSlides(-1)">❮</div>
+            <div class="next" onclick="plusSlides(1)">❯</div>
+        </div>
     </div>
-
+    
     <script>
         var slideIndex = 1;
         showSlides(slideIndex);
