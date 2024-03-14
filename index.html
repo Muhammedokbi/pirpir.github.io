@@ -1,38 +1,73 @@
+Tabii, daha estetik bir görünüm için CSS kullanarak tasarımı geliştirelim. Metni sağa hizalayalım, arka plan rengini ve yazı tipini güncelleyelim. İşte güncellenmiş HTML ve CSS kodları:
+
+```html
 <!DOCTYPE html>
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fotoğraf ve Metin</title>
+    <title>Proje Tanımı</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f0f0f0;
+            background-color: #f9f9f9;
+            color: #333;
         }
         .container {
             max-width: 800px;
             margin: 20px auto;
-            padding: 0 20px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .content {
+            text-align: justify;
+        }
+        h1 {
             text-align: center;
+            color: #007bff;
         }
-        img {
-            max-width: 400px; /* Maksimum genişlik 400 piksel */
-            height: auto;
-            display: block;
-            margin: 0 auto;
+        h2 {
+            color: #555;
         }
-        .caption {
-            margin-top: 10px;
-            font-size: 18px;
+        ul {
+            margin-bottom: 20px;
+        }
+        li {
+            margin-bottom: 10px;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <img src="resim_adı.jpg" alt="Fotoğraf Açıklaması">
-        <p class="caption">sim: robik \n jdskn</p>
+        <h1>Proje Tanımı</h1>
+        <div class="content">
+            <p><strong>Proje Adı:</strong> Havada Uçan Ateş Ölçüm Cihazı</p>
+            <p><strong>Proje Tanımı:</strong> COVID-19 pandemisiyle birlikte ateş ölçümü, hastalık kontrolünde önemli bir rol oynamıştır. Ancak, kalabalık alanlarda bireylerin ateşini tek tek ölçmek zor ve zaman alıcı olabilir. Bu proje, havada uçan bir cihaz kullanarak insanların ateşini hızlı ve etkili bir şekilde tespit etmeyi amaçlamaktadır.</p>
+            <h2>Donanım ve Sensörler:</h2>
+            <ul>
+                <li><strong>Termal Kamera:</strong> Havada uçan cihazın önünde bulunan bir termal kamera, insanların vücut sıcaklığını tespit etmek için kullanılacaktır.</li>
+                <li><strong>Ateş Ölçüm Sensörleri:</strong> Opsiyonel olarak, ateşi doğrudan ölçmek için hassas sensörler kullanılabilir.</li>
+            </ul>
+            <h2>Veri İşleme ve Analiz:</h2>
+            <ul>
+                <li><strong>Arduino Microcontroller:</strong> Arduino, termal kamera ve/veya ateş ölçüm sensörlerinden gelen verileri işleyecek ve analiz edecek bir mikrodenetleyici olarak kullanılacaktır.</li>
+                <li><strong>Veri İletimi:</strong> Arduino, işlenmiş verileri kablosuz olarak bir merkezi veri tabanına veya kontrol merkezine iletecektir. Bu iletişim, Wi-Fi, Bluetooth veya diğer uygun iletişim protokolleri aracılığıyla gerçekleştirilebilir.</li>
+            </ul>
+            <h2>Uygulama Alanları:</h2>
+            <ul>
+                <li><strong>Havaalanları:</strong> Yolcuların ateşlerini hızlı bir şekilde tespit ederek havaalanlarında güvenliği artırabilir.</li>
+                <li><strong>Hastaneler:</strong> Personelin ve hastaların sağlık durumunu izlemek için hastane koridorlarında kullanılabilir.</li>
+                <li><strong>Kamu Etkinlikleri:</strong> Konserler, festivaller ve diğer kalabalık etkinliklerde, katılımcıların ateşlerini kontrol etmek için kullanılabilir.</li>
+            </ul>
+            <p>Bu proje, toplu etkinliklerin ve kamusal alanların güvenliğini artırmak için yenilikçi bir çözüm sunmaktadır. Ayrıca, uygulama alanları ve donanım detayları, projenin potansiyel etkisini ve kullanımını daha iyi anlamamıza yardımcı olur.</p>
+        </div>
     </div>
 </body>
 </html>
+```
+
+Bu kodlar, daha modern bir görünüm sağlamak için arka plan rengini ve yazı tipini güncelliyor, ayrıca içeriği bir konteyner içine alarak daha düzenli bir görünüm elde ediyor.
