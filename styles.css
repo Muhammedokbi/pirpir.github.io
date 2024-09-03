@@ -4,7 +4,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url('your-background-image.jpg'); /* Burada arka plan fotoğrafınızı ekleyin */
+    background-image: url('your-background-image.jpg'); /* Buraya arka plan fotoğrafınızı ekleyin */
     background-size: cover;
     background-position: center;
     touch-action: none; /* Pinch-to-zoom'u devre dışı bırakmak için */
@@ -14,9 +14,6 @@ body {
     position: relative;
     width: 100%;
     height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .pimple {
