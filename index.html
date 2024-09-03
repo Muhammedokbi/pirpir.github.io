@@ -1,144 +1,16 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="assets/imgs/resim_adı.jpeg">
-    
-    <!-- Title -->
-    <title>👾 ・ robik</title>
-    <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f9f9f9;
-            color: #333;
-        }
-        .container {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        .content {
-            text-align: justify;
-        }
-        h1 {
-            text-align: center;
-            color: #007bff;
-        }
-        h2 {
-            color: #555;
-        }
-        ul {
-            margin-bottom: 20px;
-        }
-        li {
-            margin-bottom: 10px;
-        }
-        img {
-            float: right; /* Fotoğrafı sağa hizala */
-            margin-left: 20px; /* Sol kenardan biraz boşluk bırak */
-            max-width: 40%; /* Maksimum genişlik yüzde olarak ayarla */
-            height: auto;
-            border-radius: 5px;
-            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-        }
-        .image-gallery-container {
-            max-width: 800px;
-            margin: 20px auto;
-            text-align: center; /* Resim galerisini ortala */
-            position: relative;
-        }
-        .image-gallery {
-            display: inline-block; /* Resimlerin yan yana olmasını sağla */
-            position: relative;
-        }
-        .image-gallery img {
-            width: 100%; /* Resimlerin tam genişlikte olmasını sağla */
-            border-radius: 5px;
-            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-        }
-        .prev, .next {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background-color: rgba(255, 255, 255, 0.5);
-            padding: 10px;
-            border-radius: 50%;
-            cursor: pointer;
-            font-size: 24px; /* Okun boyutunu ayarlayın */
-            color: #333; /* Okun rengini ayarlayın */
-        }
-        .prev {
-            left: 0; /* Sol kenara yapışık */
-        }
-        .next {
-            right: 0; /* Sağ kenara yapışık */
-        }
-    </style>
+    <title>Sivilce Sıkma Oyunu</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
-        <h1>robik</h1>
-        <div class="content">
-            <img src="resim_adı.jpeg" alt="Proje Resmi">
-            <p><strong>Proje Adı:</strong> Havada Uçan Ateş Ölçüm Cihazı</p>
-            <p><strong>Proje Tanımı:</strong> COVID-19 pandemisiyle birlikte ateş ölçümü, hastalık kontrolünde önemli bir rol oynamıştır. Ancak, kalabalık alanlarda bireylerin ateşini tek tek ölçmek zor ve zaman alıcı olabilir. Bu proje, havada uçan bir cihaz kullanarak insanların ateşini hızlı ve etkili bir şekilde tespit etmeyi amaçlamaktadır.</p>
-            <h2>Donanım ve Sensörler:</h2>
-            <ul>
-                <li><strong>Termal Kamera:</strong> Havada uçan cihazın önünde bulunan bir termal kamera, insanların vücut sıcaklığını tespit etmek için kullanılacaktır.</li>
-                <li><strong>Ateş Ölçüm Sensörleri:</strong> Opsiyonel olarak, ateşi doğrudan ölçmek için hassas sensörler kullanılabilir.</li>
-            </ul>
-            <h2>Veri İşleme ve Analiz:</h2>
-            <ul>
-                <li><strong>Arduino Microcontroller:</strong> Arduino, termal kamera ve/veya ateş ölçüm sensörlerinden gelen verileri işleyecek ve analiz edecek bir mikrodenetleyici olarak kullanılacaktır.</li>
-                <li><strong>Veri İletimi:</strong> Arduino, işlenmiş verileri kablosuz olarak bir merkezi veri tabanına veya kontrol merkezine iletecektir. Bu iletişim, Wi-Fi, Bluetooth veya diğer uygun iletişim protokolleri aracılığıyla gerçekleştirilebilir.</li>
-            </ul>
-            <h2>Uygulama Alanları:</h2>
-            <ul>
-                <li><strong>Havaalanları:</strong> Yolcuların ateşlerini hızlı bir şekilde tespit ederek havaalanlarında güvenliği artırabilir.</li>
-                <li><strong>Hastaneler:</strong> Personelin ve hastaların sağlık durumunu izlemek için hastane koridorlarında kullanılabilir.</li>
-                <li><strong>Kamu Etkinlikleri:</strong> Konserler, festivaller ve diğer kalabalık etkinliklerde, katılımcıların ateşlerini kontrol etmek için kullanılabilir.</li>
-            </ul>
-            <p>Bu proje, toplu etkinliklerin ve kamusal alanların güvenliğini artırmak için yenilikçi bir çözüm sunmaktadır. Ayrıca, uygulama alanları ve donanım detayları, projenin potansiyel etkisini ve kullanımını daha iyi anlamamıza yardımcı olur.</p>
-        </div>
+        <div id="pimple"></div>
     </div>
-    
-    <div class="image-gallery-container">
-        <div class="image-gallery">
-            <img src="resim_1.jpg" alt="Resim 1" style="display: block;">
-            <img src="resim_2.jpg" alt="Resim 2" style="display: none;">
-            <img src="resim_3.jpg" alt="Resim 3" style="display: none;">
-            <img src="resim_4.jpg" alt="Resim 4" style="display: none;">
-            <img src="r2.jpg" alt="R 2" style="display: none;">
-            <img src="r3.jpg" alt="R 3" style="display: none;">
-            <div class="prev" onclick="plusSlides(-1)">❮</div>
-            <div class="next" onclick="plusSlides(1)">❯</div>
-        </div>
-    </div>
-    
-    <script>
-        var slideIndex = 1;
-        showSlides(slideIndex);
 
-        function plusSlides(n) {
-            showSlides(slideIndex += n);
-        }
-
-        function showSlides(n) {
-            var i;
-            var slides = document.getElementsByClassName("image-gallery")[0].getElementsByTagName("img");
-            if (n > slides.length) {slideIndex = 1}
-            if (n < 1) {slideIndex = slides.length}
-            for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
-            }
-            slides[slideIndex-1].style.display = "block";
-        }
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
