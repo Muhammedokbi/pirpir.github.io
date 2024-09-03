@@ -11,14 +11,12 @@ function calculateDistance(touches) {
 
 pimple.addEventListener('touchstart', (e) => {
     if (e.touches.length === 2) {
-        e.preventDefault();  // Tarayıcıdaki zoom hareketini engelle
         initialDistance = calculateDistance(e.touches);
     }
 });
 
 pimple.addEventListener('touchmove', (e) => {
     if (e.touches.length === 2 && initialDistance) {
-        e.preventDefault();  // Tarayıcıdaki zoom hareketini engelle
         const currentDistance = calculateDistance(e.touches);
         if (currentDistance < initialDistance / 2 && !isPimpleSqueezed) {
             isPimpleSqueezed = true;
@@ -28,14 +26,12 @@ pimple.addEventListener('touchmove', (e) => {
                 alert('Sivilceyi sıktın!');
                 pimple.style.transform = 'scale(1)';
                 pimple.style.backgroundColor = '#ff4d4d';
-                isPimpleSqueezed = false; // Yeniden sıkmak için sıfırlama
+                isPimpleSqueezed = false;
             }, 500);
         }
     }
 });
 
-pimple.addEventListener('touchend', (e) => {
-    if (e.touches.length < 2) {
-        initialDistance = null;
-    }
+pimple.addEventListener('touchend', () => {
+    initialDistance = null;
 });
