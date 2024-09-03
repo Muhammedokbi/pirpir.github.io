@@ -1,6 +1,6 @@
-const pimple = document.getElementById('pimple');
-let initialDistance = null;
-let isPimpleSqueezed = false;
+const pimples = document.querySelectorAll('.pimple');
+let initialDistances = {};
+let squeezed = { pimple1: false, pimple2: false, pimple3: false };
 
 function calculateDistance(touches) {
     const [touch1, touch2] = touches;
@@ -9,29 +9,29 @@ function calculateDistance(touches) {
     return Math.sqrt(dx * dx + dy * dy);
 }
 
-pimple.addEventListener('touchstart', (e) => {
-    if (e.touches.length === 2) {
-        initialDistance = calculateDistance(e.touches);
-    }
-});
-
-pimple.addEventListener('touchmove', (e) => {
-    if (e.touches.length === 2 && initialDistance) {
-        const currentDistance = calculateDistance(e.touches);
-        if (currentDistance < initialDistance / 2 && !isPimpleSqueezed) {
-            isPimpleSqueezed = true;
-            pimple.style.transform = 'scale(0.1)';
-            pimple.style.backgroundColor = '#ff9999';
-            setTimeout(() => {
-                alert('Sivilceyi sıktın!');
-                pimple.style.transform = 'scale(1)';
-                pimple.style.backgroundColor = '#ff4d4d';
-                isPimpleSqueezed = false;
-            }, 500);
+pimples.forEach((pimple, index) => {
+    pimple.addEventListener('touchstart', (e) => {
+        if (e.touches.length === 2) {
+            initialDistances[`pimple${index + 1}`] = calculateDistance(e.touches);
         }
-    }
+    });
+
+    pimple.addEventListener('touchmove', (e) => {
+        if (e.touches.length === 2) {
+            const currentDistance = calculateDistance(e.touches);
+            if (currentDistance < initialDistances[`pimple${index + 1}`] / 2 && !squeezed[`pimple${index + 1}`]) {
+                squeezed[`pimple${index + 1}`] = true;
+                pimple.style.transform = 'scale(0.1)';
+                pimple.style.backgroundColor = '#ff9999';
+            }
+        }
+    });
 });
 
-pimple.addEventListener('touchend', () => {
-    initialDistance = null;
+document.getElementById('reset').addEventListener('click', () => {
+    pimples.forEach((pimple, index) => {
+        pimple.style.transform = 'scale(1)';
+        pimple.style.backgroundColor = '#ff4d4d';
+        squeezed[`pimple${index + 1}`] = false;
+    });
 });
