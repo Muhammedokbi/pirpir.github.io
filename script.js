@@ -20,8 +20,14 @@ pimple.addEventListener('touchmove', (e) => {
         const currentDistance = calculateDistance(e.touches);
         if (currentDistance < initialDistance / 2 && !isPimpleSqueezed) {
             isPimpleSqueezed = true;
+            pimple.style.transform = 'scale(0.1)';
             pimple.style.backgroundColor = '#ff9999';
-            alert('Sivilceyi sıktın!');
+            setTimeout(() => {
+                alert('Sivilceyi sıktın!');
+                pimple.style.transform = 'scale(1)';
+                pimple.style.backgroundColor = '#ff4d4d';
+                isPimpleSqueezed = false; // Reset for next attempt
+            }, 500);
         }
     }
 });
