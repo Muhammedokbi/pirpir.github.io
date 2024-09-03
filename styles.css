@@ -27,18 +27,18 @@ body {
 }
 
 #pimple1 {
-    top: 30%; /* Sivilce konumu */
-    left: 40%;
+    top: 0%; /* Sivilce konumu */
+    left: 55%;
 }
 
 #pimple2 {
-    top: 50%; /* Sivilce konumu */
-    left: 60%;
+    top: 43%; /* Sivilce konumu */
+    left: 64%;
 }
 
 #pimple3 {
-    top: 70%; /* Sivilce konumu */
-    left: 50%;
+    top: 40%; /* Sivilce konumu */
+    left: 25%;
 }
 
 button {
