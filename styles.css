@@ -4,7 +4,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url('IMG_0173.jpg'); /* Arka plan fotoğrafınızı buraya ekleyin */
+    background-image: url('IMG_0172.jpg'); /* Arka plan fotoğrafınızı buraya ekleyin */
     background-size: cover;
     background-position: center;
     touch-action: none; /* Pinch-to-zoom'u devre dışı bırakmak için */
@@ -17,14 +17,31 @@ body {
 }
 
 .pimple {
-    width: 100px; /* Sıkma alanını büyütüyoruz */
+    width: 100px;
     height: 100px;
     background-color: #ff4d4d;
     border-radius: 50%;
     position: absolute;
     transition: transform 0.3s ease, background-color 0.3s ease;
-    box-shadow: inset -7px -7px 0px rgba(0, 0, 0, 0.3), 0px 0px 10px rgba(0, 0, 0, 0.2); /* Derinlik ve dış gölge ekledik */
-    border: 5px solid #ffcccc; /* Sivilce kenarına hafif bir kontur ekledik */
+    box-shadow: inset -7px -7px 0px rgba(0, 0, 0, 0.3), 0px 0px 10px rgba(0, 0, 0, 0.2);
+    border: 5px solid #ffcccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Yeşil maddenin taşmasını engellemek için */
+}
+
+.pus {
+    width: 15px;
+    height: 15px;
+    background-color: #b3b300; /* Yeşil pus maddesinin rengi */
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 #pimple1 {
