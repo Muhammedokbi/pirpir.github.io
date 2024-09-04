@@ -4,7 +4,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url('IMG_0173.jpg'); /* Buraya arka plan fotoğrafınızı ekleyin */
+    background-image: url('IMG_01.jpg'); /* Arka plan fotoğrafınızı buraya ekleyin */
     background-size: cover;
     background-position: center;
     touch-action: none; /* Pinch-to-zoom'u devre dışı bırakmak için */
@@ -17,28 +17,29 @@ body {
 }
 
 .pimple {
-    width: 80px;
-    height: 80px;
+    width: 100px; /* Sıkma alanını büyütüyoruz */
+    height: 100px;
     background-color: #ff4d4d;
     border-radius: 50%;
     position: absolute;
     transition: transform 0.3s ease, background-color 0.3s ease;
-    box-shadow: inset -5px -5px 0px rgba(0, 0, 0, 0.2); /* Sivilcelere derinlik eklemek için */
+    box-shadow: inset -7px -7px 0px rgba(0, 0, 0, 0.3), 0px 0px 10px rgba(0, 0, 0, 0.2); /* Derinlik ve dış gölge ekledik */
+    border: 5px solid #ffcccc; /* Sivilce kenarına hafif bir kontur ekledik */
 }
 
 #pimple1 {
-    top: 0%; /* Sivilce konumu */
-    left: 55%;
+    top: 30%;
+    left: 40%;
 }
 
 #pimple2 {
-    top: 43%; /* Sivilce konumu */
-    left: 64%;
+    top: 50%;
+    left: 60%;
 }
 
 #pimple3 {
-    top: 40%; /* Sivilce konumu */
-    left: 25%;
+    top: 70%;
+    left: 50%;
 }
 
 button {
