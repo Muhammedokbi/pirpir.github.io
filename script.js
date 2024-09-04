@@ -26,7 +26,7 @@ pimples.forEach((pimple, index) => {
                 pimple.style.transform = 'scale(0.1)';
                 pimple.style.backgroundColor = '#ff9999';
                 pus.style.opacity = '1';
-                pus.style.transform = 'translate(-50%, -300%)'; /* Yeşil maddeyi sıçratma efekti */
+                pus.style.transform = 'translate(-50%, 200%) scale(2)'; /* Yeşil maddeyi aşağıya ve büyük şekilde sıçratma efekti */
             }
         }
     });
@@ -39,6 +39,6 @@ document.getElementById('reset').addEventListener('click', () => {
         pimple.style.backgroundColor = '#ff4d4d';
         squeezed[`pimple${index + 1}`] = false;
         pus.style.opacity = '0';
-        pus.style.transform = 'translate(-50%, -50%)';
+        pus.style.transform = 'translate(-50%, -50%) scale(1)';
     });
 });
