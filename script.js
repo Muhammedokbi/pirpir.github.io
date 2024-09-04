@@ -10,6 +10,8 @@ function calculateDistance(touches) {
 }
 
 pimples.forEach((pimple, index) => {
+    const pus = pimple.querySelector('.pus');
+    
     pimple.addEventListener('touchstart', (e) => {
         if (e.touches.length === 2) {
             initialDistances[`pimple${index + 1}`] = calculateDistance(e.touches);
@@ -23,6 +25,8 @@ pimples.forEach((pimple, index) => {
                 squeezed[`pimple${index + 1}`] = true;
                 pimple.style.transform = 'scale(0.1)';
                 pimple.style.backgroundColor = '#ff9999';
+                pus.style.opacity = '1';
+                pus.style.transform = 'translate(-50%, -300%)'; /* Yeşil maddeyi sıçratma efekti */
             }
         }
     });
@@ -30,8 +34,11 @@ pimples.forEach((pimple, index) => {
 
 document.getElementById('reset').addEventListener('click', () => {
     pimples.forEach((pimple, index) => {
+        const pus = pimple.querySelector('.pus');
         pimple.style.transform = 'scale(1)';
         pimple.style.backgroundColor = '#ff4d4d';
         squeezed[`pimple${index + 1}`] = false;
+        pus.style.opacity = '0';
+        pus.style.transform = 'translate(-50%, -50%)';
     });
 });
