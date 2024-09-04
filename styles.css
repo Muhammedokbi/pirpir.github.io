@@ -4,7 +4,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url('IMG_0173.jpg'); /* Arka plan fotoğrafınızı buraya ekleyin */
+    background-image: url('your-background-image.jpg'); /* Arka plan fotoğrafınızı buraya ekleyin */
     background-size: cover;
     background-position: center;
     touch-action: none; /* Pinch-to-zoom'u devre dışı bırakmak için */
@@ -17,8 +17,8 @@ body {
 }
 
 .pimple {
-    width: 100px;
-    height: 100px;
+    width: 90px;
+    height: 90px;
     background-color: #ff4d4d;
     border-radius: 50%;
     position: absolute;
@@ -32,8 +32,8 @@ body {
 }
 
 .pus {
-    width: 15px;
-    height: 15px;
+    width: 20px;
+    height: 20px;
     background-color: #b3b300; /* Yeşil pus maddesinin rengi */
     border-radius: 50%;
     position: absolute;
