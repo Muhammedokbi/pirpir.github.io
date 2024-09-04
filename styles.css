@@ -4,7 +4,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url('IMG_0172.jpg'); /* Arka plan fotoğrafınızı buraya ekleyin */
+    background-image: url('IMG_0173.jpg'); /* Arka plan fotoğrafınızı buraya ekleyin */
     background-size: cover;
     background-position: center;
     touch-action: none; /* Pinch-to-zoom'u devre dışı bırakmak için */
