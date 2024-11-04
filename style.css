@@ -1,0 +1,200 @@
+/* Genel Ayarlar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: #e1ffe1;
+    background-color: #1a1a1a;
+    font-family: 'Press Start 2P', sans-serif;
+    background-image: url('pixel-background.png'); /* Arka planda pixel art tarzı desen */
+    background-size: 8px 8px;
+    line-height: 1.6; /* Metinlerin daha rahat okunması için */
+    padding: 20px;
+}
+
+/* Preloader */
+#preloader {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: #1a1a1a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.loader {
+    border: 4px solid #e1ffe1;
+    border-top: 4px solid #4caf50;
+    border-radius: 0;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Navbar */
+header {
+    background: #333;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+header nav ul li a {
+    color: #4caf50;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    border: 2px solid #4caf50;
+    padding: 5px 10px;
+    border-radius: 0;
+    transition: background-color 0.3s;
+}
+
+header nav ul li a:hover {
+    background-color: #4caf50;
+    color: #1a1a1a;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    margin: 40px 0; /* Boşluk eklendi */
+}
+
+.hero h1 {
+    font-size: 36px;
+    color: #4caf50;
+    animation: shake 0.5s infinite alternate;
+    margin-bottom: 10px; /* Başlık ve açıklama arasına boşluk */
+}
+
+.hero p {
+    font-size: 16px;
+    color: #e1ffe1;
+}
+
+/* Parallax Section */
+.parallax {
+    background: url('parallax-background.png') no-repeat center center/cover;
+    height: 200px;
+    position: relative;
+    opacity: 0.7;
+    margin: 40px 0; /* Üst ve alt bölüm arasına boşluk */
+}
+
+/* Media Section */
+.media {
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.video-container iframe {
+    max-width: 100%;
+    border: none;
+    box-shadow: 0 0 10px #4caf50;
+    margin-bottom: 20px; /* Video ve alt görseller arasına boşluk */
+}
+
+.images {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 20px;
+}
+
+.images img {
+    width: 100px;
+    border: 2px solid #4caf50;
+    border-radius: 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Download Section */
+.download {
+    text-align: center;
+    padding: 30px 20px;
+    margin: 40px 0; /* Bölüm arasına boşluk eklendi */
+}
+
+.download-btn {
+    background: #4caf50;
+    color: #1a1a1a;
+    padding: 10px 20px;
+    border-radius: 0;
+    text-decoration: none;
+    font-weight: bold;
+    border: 2px solid #333;
+    box-shadow: 0 0 10px #4caf50;
+    transition: transform 0.2s;
+    margin-bottom: 10px; /* Buton ve fiyat arasında boşluk */
+}
+
+.download-btn:hover {
+    transform: scale(1.1);
+}
+
+/* Features Section */
+.features {
+    padding: 30px 20px;
+    text-align: center;
+    color: #4caf50;
+    margin: 40px 0; /* Bölüm arasına boşluk eklendi */
+}
+
+.features h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px #333;
+}
+
+.features li {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+/* Reviews Section */
+.reviews {
+    background: #3a3a3a;
+    padding: 30px 20px;
+    text-align: center;
+    margin: 40px 0; /* Bölüm arasına boşluk eklendi */
+}
+
+.review {
+    max-width: 400px;
+    margin: 20px auto;
+    font-style: italic;
+    color: #e1ffe1;
+    border-left: 3px solid #4caf50;
+    padding-left: 10px;
+    text-align: left;
+    margin-bottom: 20px; /* Yorumlar arası boşluk */
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: #4caf50;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 12px;
+    margin-top: 20px; /* Footer'a üstten boşluk */
+}
