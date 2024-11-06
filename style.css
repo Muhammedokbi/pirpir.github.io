@@ -9,17 +9,10 @@ body {
     color: #e1ffe1;
     background-color: #1a1a1a;
     font-family: 'Press Start 2P', sans-serif;
-    background-image: url('pixel-background.png');
-    background-size: 16px 16px;
-    line-height: 1.6;
+    background-image: url('pixel-background.png'); /* Arka planda pixel art tarzı desen */
+    background-size: 8px 8px;
+    line-height: 1.6; /* Metinlerin daha rahat okunması için */
     padding: 20px;
-}
-
-/* Container for Centered Content */
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
 }
 
 /* Preloader */
@@ -37,6 +30,7 @@ body {
 .loader {
     border: 4px solid #e1ffe1;
     border-top: 4px solid #4caf50;
+    border-radius: 0;
     width: 50px;
     height: 50px;
     animation: spin 1s linear infinite;
@@ -70,26 +64,26 @@ header nav ul li a {
     font-weight: bold;
     border: 2px solid #4caf50;
     padding: 5px 10px;
-    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+    border-radius: 0;
+    transition: background-color 0.3s;
 }
 
 header nav ul li a:hover {
     background-color: #4caf50;
     color: #1a1a1a;
-    transform: scale(1.05);
 }
 
 /* Hero Section */
 .hero {
     text-align: center;
-    margin: 40px 0;
+    margin: 40px 0; /* Boşluk eklendi */
 }
 
 .hero h1 {
     font-size: 36px;
     color: #4caf50;
     animation: shake 0.5s infinite alternate;
-    margin-bottom: 10px;
+    margin-bottom: 10px; /* Başlık ve açıklama arasına boşluk */
 }
 
 .hero p {
@@ -101,8 +95,9 @@ header nav ul li a:hover {
 .parallax {
     background: url('parallax-background.png') no-repeat center center/cover;
     height: 200px;
+    position: relative;
     opacity: 0.7;
-    margin: 40px 0;
+    margin: 40px 0; /* Üst ve alt bölüm arasına boşluk */
 }
 
 /* Media Section */
@@ -115,7 +110,7 @@ header nav ul li a:hover {
     max-width: 100%;
     border: none;
     box-shadow: 0 0 10px #4caf50;
-    margin-bottom: 20px;
+    margin-bottom: 20px; /* Video ve alt görseller arasına boşluk */
 }
 
 .images {
@@ -128,80 +123,61 @@ header nav ul li a:hover {
 .images img {
     width: 100px;
     border: 2px solid #4caf50;
+    border-radius: 0;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    border-radius: 5px;
 }
 
 /* Download Section */
 .download {
     text-align: center;
     padding: 30px 20px;
-    margin: 40px 0;
+    margin: 40px 0; /* Bölüm arasına boşluk eklendi */
 }
 
 .download-btn {
-    background: linear-gradient(45deg, #4caf50, #3a9e3a);
+    background: #4caf50;
     color: #1a1a1a;
-    padding: 12px 24px;
-    border-radius: 8px;
+    padding: 10px 20px;
+    border-radius: 0;
     text-decoration: none;
     font-weight: bold;
-    border: none;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    transition: transform 0.2s, box-shadow 0.2s;
-    cursor: pointer;
+    border: 2px solid #333;
+    box-shadow: 0 0 10px #4caf50;
+    transition: transform 0.2s;
+    margin-bottom: 10px; /* Buton ve fiyat arasında boşluk */
 }
 
 .download-btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+    transform: scale(1.1);
 }
 
-/* Features, Reviews, and Download Sections */
-.features, .reviews, .download {
-    background-color: #2b2b2b;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-    margin-bottom: 40px;
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeInUp 1s ease forwards;
-}
-
-@keyframes fadeInUp {
-    0% {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Section Headers */
-.features h2, .reviews h2 {
-    font-size: 24px;
+/* Features Section */
+.features {
+    padding: 30px 20px;
+    text-align: center;
     color: #4caf50;
-    text-shadow: 1px 1px #333;
-    position: relative;
-    margin-bottom: 20px;
-    padding-bottom: 5px;
+    margin: 40px 0; /* Bölüm arasına boşluk eklendi */
 }
 
-.features h2::after, .reviews h2::after {
-    content: "";
-    position: absolute;
-    width: 50px;
-    height: 3px;
-    background-color: #4caf50;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
+.features h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px #333;
+}
+
+.features li {
+    font-size: 14px;
+    margin-bottom: 10px;
 }
 
 /* Reviews Section */
+.reviews {
+    background: #3a3a3a;
+    padding: 30px 20px;
+    text-align: center;
+    margin: 40px 0; /* Bölüm arasına boşluk eklendi */
+}
+
 .review {
     max-width: 400px;
     margin: 20px auto;
@@ -210,8 +186,7 @@ header nav ul li a:hover {
     border-left: 3px solid #4caf50;
     padding-left: 10px;
     text-align: left;
-    border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    margin-bottom: 20px; /* Yorumlar arası boşluk */
 }
 
 /* Footer */
@@ -221,30 +196,5 @@ footer {
     text-align: center;
     padding: 10px 0;
     font-size: 12px;
-    margin-top: 20px;
-}
-
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-    header nav ul {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .hero h1 {
-        font-size: 28px;
-    }
-
-    .hero p, .features h2, .features li {
-        font-size: 14px;
-    }
-
-    .features, .reviews, .download {
-        padding: 20px 10px;
-    }
-
-    .images {
-        flex-direction: column;
-        align-items: center;
-    }
+    margin-top: 20px; /* Footer'a üstten boşluk */
 }
