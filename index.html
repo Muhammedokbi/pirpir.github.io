@@ -3,86 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Gırgır - 2D Game</title>
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <title>Oyun Arşivi</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Preloader -->
-    <div id="preloader">
-        <div class="loader"></div>
+    <div class="container">
+        <!-- Başlık ve Menü -->
+        <header>
+            <h1>Oyun Arşivi</h1>
+            <p>Retro dünyaya hoş geldiniz! Aşağıdan oyunlarınızı keşfedin.</p>
+        </header>
+
+        <!-- Oyun Listesi -->
+        <section class="game-list">
+            <div class="game-card">
+                <img src="game1.png" alt="Oyun 1">
+                <h2>Oyun Adı 1</h2>
+                <p>Kısa açıklama buraya gelebilir.</p>
+                <a href="https://drive.google.com/your-game-link" target="_blank" class="download-btn">İndir</a>
+            </div>
+            <div class="game-card">
+                <img src="game2.png" alt="Oyun 2">
+                <h2>Oyun Adı 2</h2>
+                <p>Kısa açıklama buraya gelebilir.</p>
+                <a href="https://drive.google.com/your-game-link" target="_blank" class="download-btn">İndir</a>
+            </div>
+            <div class="game-card">
+                <img src="game3.png" alt="Oyun 3">
+                <h2>Oyun Adı 3</h2>
+                <p>Kısa açıklama buraya gelebilir.</p>
+                <a href="https://drive.google.com/your-game-link" target="_blank" class="download-btn">İndir</a>
+            </div>
+        </section>
+
+        <!-- Altbilgi -->
+        <footer>
+            <p>&copy; 2024 Oyun Arşivi. Tüm hakları saklıdır.</p>
+        </footer>
     </div>
-
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#features">Features</a></li>
-                <li><a href="#media">Gallery</a></li>
-                <li><a href="#download">Download</a></li>
-            </ul>
-        </nav>
-        <div class="hero">
-            <h1>Gırgır</h1>
-            <p>Heyecan verici bir platform macerası!</p>
-        </div>
-    </header>
-
-    <!-- Parallax Section -->
-    <section class="parallax"></section>
-    
-    <!-- Media Section -->
-<section id="media" class="media">
-    <div class="video-container">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/NJ2TkBrWA04" 
-        title="Gırgır Gameplay" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
-    <div class="images">
-        <img src="1jpeg" alt="Screenshot 1">
-        <img src="2jpeg" alt="Screenshot 2">
-        <img src="3jpeg" alt="Screenshot 3">
-    </div>
-</section>
-
-    <!-- Download Section -->
-    <section id="download" class="download">
-        <a href="https://drive.google.com/file/d/1zBUYA9mor5EUaVBD95gzq1QOqqaRcA2f/view?usp=drive_link">Download</a>
-        <p>test surumu V1</p>
-    </section>
-
-    <!-- Features Section -->
-    <section id="features" class="features">
-        <h2>Oyun Özellikleri</h2>
-        <ul>
-            <li>Gizemli zindanları keşfedin</li>
-            <li>Güzel tasarimli pixelart</li>
-            <li>Müzikler @alp.brando ayittir</li>
-        </ul>
-    </section>
-
-    <!-- Testimonial Section -->
-    <section class="reviews">
-        <h2>Oyuncular Ne Diyor?</h2>
-        <div class="review">
-            <p>"güzel işte oyun ama daha iyi tasarim yaparim "</p>
-            <p>- yigit</p>
-        </div>
-        <div class="review">
-            <p>"müzik oyunu güzeliştirmiş "</p>
-            <p>- aşk kadini</p>
-        </div>
-    </section>
-
-    <footer>
-        <p>&copy; 2024 Gırgır Oyunu. Her hakkı saklıdır.</p>
-    </footer>
-
-    <!-- Background Music -->
-<audio autoplay loop>
-    <source src="arkamuzik.mp3" type="audio/mpeg">
-    Tarayıcınız ses öğesini desteklemiyor.
-</audio>
-
-    <script src="script.js"></script>
 </body>
 </html>
