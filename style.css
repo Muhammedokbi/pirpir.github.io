@@ -7,11 +7,15 @@ body, html {
     height: 100%;
 }
 
-/* Parallax Header (Parallax Efekti Kaldırıldı) */
+/* Parallax Header */
 .parallax-header {
     position: relative;
-    height: 100vh;
-    background-color: #333; /* Arka plan rengi */
+    height: 100vh; /* Yükseklik ekranın tamamını kapsar */
+    background-image: url('DALL·E-2024-11-30-23.22.png'); /* Görselin yolu */
+    background-size: cover;  /* Görselin sayfayı kaplamasını sağlar */
+    background-position: center;  /* Görselin ortalanmasını sağlar */
+    background-attachment: fixed; /* Parallax Efekti */
+    background-repeat: no-repeat;  /* Görselin tekrar etmesini engeller */
     color: white;
     text-align: center;
     display: flex;
@@ -19,6 +23,7 @@ body, html {
     align-items: center;
     padding: 20px;
 }
+
 
 .overlay {
     background-color: rgba(0, 0, 0, 0.5);
