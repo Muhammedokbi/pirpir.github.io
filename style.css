@@ -8,7 +8,7 @@ body, html {
 
 /* Parallax Header */
 .parallax-header {
-    background-image: url('your-background-image.jpg');
+    background-image: url('background-image.webp'); /* WebP formatında uygun bir arka plan görseli */
     background-position: center;
     background-attachment: fixed;
     background-size: cover;
@@ -34,6 +34,7 @@ nav {
 
 nav .logo {
     font-size: 2rem;
+    color: #ffcc00; /* Altın renk */
 }
 
 nav ul {
@@ -46,6 +47,11 @@ nav a {
     color: white;
     text-decoration: none;
     font-size: 1.2rem;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #ffcc00;
 }
 
 .headline h1 {
@@ -114,38 +120,6 @@ nav a {
 
 .game-card a:hover {
     background-color: #ff7844;
-}
-
-/* Öğretmen Bölümü */
-.teacher {
-    background-color: #333;
-    padding: 40px;
-    text-align: center;
-}
-
-.teacher-card {
-    background-color: #444;
-    padding: 20px;
-    border-radius: 8px;
-    display: inline-block;
-    width: 300px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
-}
-
-.teacher-card img {
-    width: 100%;
-    border-radius: 8px;
-    height: auto;
-}
-
-.teacher-card h3 {
-    font-size: 2rem;
-    color: #ffcc00;
-}
-
-.teacher-card p {
-    font-size: 1.2rem;
-    color: #ccc;
 }
 
 /* Footer */
