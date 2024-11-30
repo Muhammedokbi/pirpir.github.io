@@ -7,16 +7,11 @@ body, html {
 }
 
 /* Parallax Header */
-.parallax-header {
-    background-image: url('a.webp'); /* WebP formatında uygun bir arka plan görseli */
-    background-position: center;
-    background-attachment: fixed;
-    background-size: cover;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
+body {
+    background-image: url('a.png'); /* Burada PNG dosyanızın yolunu belirtin */
+    background-size: cover;  /* Görselin sayfayı kaplamasını sağlar */
+    background-position: center;  /* Görselin ortalanmasını sağlar */
+    background-repeat: no-repeat;  /* Görselin tekrar etmesini engeller */
 }
 
 .overlay {
