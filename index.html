@@ -3,46 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Oyun Arşivi</title>
-    <link rel="stylesheet" href="styles.css"> <!-- CSS dosyasını dahil et -->
+    <title>Retro Oyun Arşivi</title>
+    <link rel="stylesheet" href="styles.css"> <!-- CSS dosyasına bağlantı -->
 </head>
 <body>
-
-    <header>
-        <h1>Oyun Arşivi</h1>
+    <!-- Parallax Arka Plan -->
+    <header class="parallax-header">
+        <div class="overlay">
+            <nav>
+                <div class="logo">Retro Oyun</div>
+                <ul>
+                    <li><a href="#">Ana Sayfa</a></li>
+                    <li><a href="#">Hakkında</a></li>
+                    <li><a href="#">Oyunlar</a></li>
+                    <li><a href="#">İletişim</a></li>
+                </ul>
+            </nav>
+            <div class="headline">
+                <h1>Retro Oyun Arşivi</h1>
+                <p>Geçmişin oyunlarına yolculuk yapın!</p>
+            </div>
+        </div>
     </header>
 
-    <div class="game-container">
-        <!-- Game Item 1 -->
-        <div class="game-item">
-            <img src="game1-thumbnail.jpg" alt="Game 1 Thumbnail">
-            <h2 class="game-title">Game 1: Başlangıç</h2>
-            <p class="game-description">Efsanevi bir dünyada keşfe çıkın ve heyecan verici seviyeleri tamamlayın.</p>
-            <a href="game1.html">Oyunu Başlat</a>
+    <!-- Oyunlar Bölümü -->
+    <section class="games">
+        <h2>Oyunlar</h2>
+        <div class="game-card">
+            <img src="game1.png" alt="Oyun 1">
+            <h3>Oyun 1</h3>
+            <p>Bir zamanlar efsane olan bir oyun!</p>
+            <a href="#">İndir</a>
         </div>
-
-        <!-- Game Item 2 -->
-        <div class="game-item">
-            <img src="game2-thumbnail.jpg" alt="Game 2 Thumbnail">
-            <h2 class="game-title">Game 2: Macera Devam Ediyor</h2>
-            <p class="game-description">Yeni mekanikler ve bulmacalarla dolu bir dünyaya adım atın.</p>
-            <a href="game2.html">Oyunu Başlat</a>
+        <div class="game-card">
+            <img src="game2.png" alt="Oyun 2">
+            <h3>Oyun 2</h3>
+            <p>En çok oynanan retro oyunlardan biri.</p>
+            <a href="#">İndir</a>
         </div>
-
-        <!-- Game Item 3 -->
-        <div class="game-item">
-            <img src="game3-thumbnail.jpg" alt="Game 3 Thumbnail">
-            <h2 class="game-title">Game 3: Son Görev</h2>
-            <p class="game-description">Son bir görev için hazırlan ve yeni özelliklerle dolu bir dünyada savaşa katıl.</p>
-            <a href="game3.html">Oyunu Başlat</a>
+        <div class="game-card">
+            <img src="game3.png" alt="Oyun 3">
+            <h3>Oyun 3</h3>
+            <p>Nostaljik grafiklerle retro bir deneyim.</p>
+            <a href="#">İndir</a>
         </div>
+    </section>
 
-        <!-- Daha fazla oyun buraya eklenebilir -->
-    </div>
-
+    <!-- Footer -->
     <footer>
-        <p>&copy; 2024 Oyun Arşivi - Tüm Hakları Saklıdır</p>
+        <p>&copy; 2024 Retro Oyun Arşivi. Tüm hakları saklıdır.</p>
     </footer>
-
 </body>
 </html>
