@@ -15,7 +15,7 @@ body {
 .parallax-header {
     position: relative;
     height: 100vh; /* Yükseklik ekranın tamamını kapsar */
-    background-image: url('your-image.png'); /* Burada PNG dosyanızın yolunu belirtin */
+    background-image: url('DALL·E-2024-11-30-23.22.png'); /* Burada PNG dosyanızın yolunu belirtin */
     background-size: cover;  /* Görselin sayfayı kaplamasını sağlar */
     background-position: center;  /* Görselin ortalanmasını sağlar */
     background-repeat: no-repeat;  /* Görselin tekrar etmesini engeller */
