@@ -91,9 +91,7 @@
             let parallax = document.querySelector('.parallax-header');
             parallax.style.backgroundPosition = 'center ' + (scrolled * 0.5) + 'px';
 
-            // Asya'nın paralel hareketi
-            let asyaCard = document.querySelector('.asya');
-            asyaCard.style.transform = 'translateY(' + (scrolled * 0.2) + 'px)';
+
         });
     </script>
 </body>
