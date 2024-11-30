@@ -6,40 +6,54 @@
     <title>Oyun Arşivi</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <div class="container">
-        <!-- Başlık ve Menü -->
-        <header>
-            <h1>Oyun Arşivi</h1>
-            <p>Retro dünyaya hoş geldiniz! Aşağıdan oyunlarınızı keşfedin.</p>
-        </header>
+<body class="dark-mode">
+    <!-- Başlık ve Menü -->
+    <header>
+        <h1>Oyun Arşivi</h1>
+        <nav>
+            <a href="#games">Oyunlar</a>
+            <a href="#about">Hakkında</a>
+            <a href="#contact">İletişim</a>
+        </nav>
+        <p>Retro dünyaya hoş geldiniz! Aşağıdan oyunlarınızı keşfedin.</p>
+    </header>
 
-        <!-- Oyun Listesi -->
-        <section class="game-list">
-            <div class="game-card">
-                <img src="game1.png" alt="Oyun 1">
-                <h2>Oyun Adı 1</h2>
-                <p>Kısa açıklama buraya gelebilir.</p>
-                <a href="https://drive.google.com/your-game-link" target="_blank" class="download-btn">İndir</a>
-            </div>
-            <div class="game-card">
-                <img src="game2.png" alt="Oyun 2">
-                <h2>Oyun Adı 2</h2>
-                <p>Kısa açıklama buraya gelebilir.</p>
-                <a href="https://drive.google.com/your-game-link" target="_blank" class="download-btn">İndir</a>
-            </div>
-            <div class="game-card">
-                <img src="game3.png" alt="Oyun 3">
-                <h2>Oyun Adı 3</h2>
-                <p>Kısa açıklama buraya gelebilir.</p>
-                <a href="https://drive.google.com/your-game-link" target="_blank" class="download-btn">İndir</a>
-            </div>
-        </section>
+    <!-- Oyun Listesi -->
+    <section id="games" class="game-list">
+        <div class="game-card">
+            <img src="game1.png" alt="Oyun 1">
+            <h2>Oyun Adı 1</h2>
+            <p>Kısa açıklama buraya gelebilir.</p>
+            <iframe src="https://www.youtube.com/embed/video-id" allowfullscreen></iframe>
+            <a href="https://drive.google.com/your-game-link" target="_blank" class="download-btn">İndir</a>
+        </div>
+        <div class="game-card">
+            <img src="game2.png" alt="Oyun 2">
+            <h2>Oyun Adı 2</h2>
+            <p>Kısa açıklama buraya gelebilir.</p>
+            <iframe src="https://www.youtube.com/embed/video-id" allowfullscreen></iframe>
+            <a href="https://drive.google.com/your-game-link" target="_blank" class="download-btn">İndir</a>
+        </div>
+    </section>
 
-        <!-- Altbilgi -->
-        <footer>
-            <p>&copy; 2024 Oyun Arşivi. Tüm hakları saklıdır.</p>
-        </footer>
+    <!-- Modal -->
+    <div id="gameModal" class="modal">
+        <span class="modal-close" onclick="closeModal()">✖</span>
+        <h2>Oyun Adı 1</h2>
+        <p>Bu oyun retro platform türünde bir şaheserdir. Macera dolu bir hikayeye hazır olun!</p>
     </div>
+
+    <!-- Altbilgi -->
+    <footer>
+        <p>&copy; 2024 Oyun Arşivi. Tüm hakları saklıdır.</p>
+        <a href="#">Facebook</a>
+        <a href="#">Twitter</a>
+        <a href="#">Instagram</a>
+    </footer>
+
+    <!-- Tema Geçiş Düğmesi -->
+    <button class="toggle-theme" onclick="toggleTheme()">🌞 / 🌙</button>
+
+    <script src="script.js"></script>
 </body>
 </html>
