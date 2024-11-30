@@ -50,5 +50,14 @@
     <footer>
         <p>&copy; 2024 ALTIN NESİL. Tüm hakları saklıdır.</p>
     </footer>
+
+    <script>
+        // Parallax Etkisi
+        window.addEventListener('scroll', function() {
+            let scrolled = window.scrollY;
+            let parallax = document.querySelector('.parallax-header');
+            parallax.style.backgroundPosition = 'center ' + (scrolled * 0.5) + 'px';
+        });
+    </script>
 </body>
 </html>
