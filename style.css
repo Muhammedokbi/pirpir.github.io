@@ -18,6 +18,7 @@ body {
     background-image: url('DALL·E-2024-11-30-23.22.png'); /* Burada PNG dosyanızın yolunu belirtin */
     background-size: cover;  /* Görselin sayfayı kaplamasını sağlar */
     background-position: center;  /* Görselin ortalanmasını sağlar */
+    background-attachment: fixed; /* Görselin sabit kalmasını sağlar (Parallax Efekti) */
     background-repeat: no-repeat;  /* Görselin tekrar etmesini engeller */
     color: white;
     text-align: center;
@@ -25,12 +26,12 @@ body {
     justify-content: center;
     align-items: center;
     padding: 20px;
-    z-index: -1;
 }
 
 .overlay {
     background-color: rgba(0, 0, 0, 0.5);
     width: 100%;
+    text-align: center;
     padding: 20px;
 }
 
