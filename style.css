@@ -1,62 +1,125 @@
-/* General Settings */
-body {
+/* Genel Ayarlar */
+body, html {
     margin: 0;
-    font-family: Arial, sans-serif;
+    padding: 0;
+    font-family: 'Press Start 2P', sans-serif;
     color: white;
 }
 
-/* Parallax Background */
-.parallax {
-    background-image: url('path-to-your-image.jpg');  /* Arka plan görselinizin yolu */
-    background-attachment: fixed;  /* Parallax efekti için */
+/* Parallax Header */
+.parallax-header {
+    background-image: url('your-background-image.jpg');
+    background-position: center;
+    background-attachment: fixed;
     background-size: cover;
-    height: 100vh;  /* Yüksekliği tam ekran yapar */
+    height: 100vh;
     display: flex;
-    flex-direction: column;
     justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
     text-align: center;
-}
-
-.parallax .logo {
-    font-size: 2rem;
     padding: 20px;
-    background: rgba(0, 0, 0, 0.6);
-    border-radius: 5px;
 }
 
-.parallax nav ul {
-    list-style: none;
-    padding: 0;
-    margin-top: 20px;
+nav {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    padding: 20px;
 }
 
-.parallax nav ul li {
-    margin: 0 15px;
+nav .logo {
+    font-size: 2rem;
 }
 
-.parallax nav ul li a {
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
     color: white;
     text-decoration: none;
     font-size: 1.2rem;
 }
 
-.parallax .headline h1 {
-    font-size: 3rem;
+.headline h1 {
+    font-size: 4rem;
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+    margin: 0;
 }
 
-/* Content Section */
-.content {
+.headline p {
+    font-size: 1.5rem;
+}
+
+/* Oyun Listesi */
+.games {
+    background-color: #222;
     padding: 40px;
-    background-color: #333;
     text-align: center;
+}
+
+.games h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.game-card {
+    background-color: #333;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 8px;
+    display: inline-block;
+    width: 250px;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.game-card:hover {
+    transform: scale(1.1);
+}
+
+.game-card img {
+    width: 100%;
+    border-radius: 8px;
+    height: auto;
+}
+
+.game-card h3 {
+    font-size: 1.5rem;
+    color: #ffcc00;
+}
+
+.game-card p {
+    font-size: 1rem;
+    color: #ccc;
+}
+
+.game-card a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ff5733;
+    color: white;
+    text-decoration: none;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+.game-card a:hover {
+    background-color: #ff7844;
 }
 
 /* Footer */
 footer {
     background-color: #222;
-    padding: 10px;
+    color: #777;
+    padding: 20px;
     text-align: center;
 }
