@@ -1,11 +1,15 @@
-// Preloader'ı gizle
-window.addEventListener("load", () => {
-    const preloader = document.getElementById("preloader");
-    preloader.style.display = "none";
-});
+// Tema Geçişi
+function toggleTheme() {
+    const body = document.body;
+    body.classList.toggle('dark-mode');
+    body.classList.toggle('light-mode');
+}
 
-// Arka plan müziği kontrolü
-document.addEventListener("DOMContentLoaded", () => {
-    const audio = document.querySelector("audio");
-    audio.volume = 0.1; // Ses düzeyini azaltmak için
-});
+// Modal Aç/Kapat
+function openModal() {
+    document.getElementById('gameModal').classList.add('visible');
+}
+
+function closeModal() {
+    document.getElementById('gameModal').classList.remove('visible');
+}
