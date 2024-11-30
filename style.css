@@ -1,227 +1,100 @@
-/* Genel Ayarlar */
-body, html {
-    margin: 0;
-    padding: 0;
-    font-family: 'Press Start 2P', sans-serif;
-    color: white;
-    height: 100%;
-}
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎮️ ・ ALTIN NESİL</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Parallax Arka Plan -->
+    <header class="parallax-header">
+        <div class="overlay">
+            <nav>
+                <div class="logo">ALTIN NESİL</div>
+                <ul>
+                    <li><a href="#">Kişiler</a></li>
+                    <li><a href="#">Oyunlar</a></li>
+                </ul>
+            </nav>
+            <div class="headline">
+                <h1>ALTIN NESİL - Retro Oyun Arşivi</h1>
+                <p>Geçmişin oyunlarına yolculuk yapın!</p>
+            </div>
+        </div>
+    </header>
 
-/* Parallax Header */
-.parallax-header {
-    position: relative;
-    height: 100vh; /* Yükseklik ekranın tamamını kapsar */
-    background-image: url('DALL·E-2024-11-30-23.22.png'); /* Görselin yolu */
-    background-size: cover;  /* Görselin sayfayı kaplamasını sağlar */
-    background-position: center;  /* Görselin ortalanmasını sağlar */
-    background-attachment: fixed; /* Parallax Efekti */
-    background-repeat: no-repeat;  /* Görselin tekrar etmesini engeller */
-    color: white;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-}
+    <!-- Kişiler Bölümü -->
+    <section class="team">
+        <h2>Takımımız</h2>
+        <div class="team-row">
+            <div class="team-card">
+                <div class="team-img"></div>
+                <h3>Fatih Hoca</h3>
+                <p>Yazılım Geliştirici</p>
+            </div>
+            <div class="team-card">
+                <div class="team-img"></div>
+                <h3>Ali</h3>
+                <p>Müzik Tasarımcısı</p>
+            </div>
+            <div class="team-card asya">
+                <div class="team-img"></div>
+                <h3>Asya</h3>
+                <p>Grafik Tasarımcı</p>
+            </div>
+            <div class="team-card">
+                <div class="team-img"></div>
+                <h3>Mehmet</h3>
+                <p>Çizim ve Grafik Tasarımcı</p>
+            </div>
+            <div class="team-card">
+                <div class="team-img"></div>
+                <h3>Zeynep</h3>
+                <p>Çizim ve Grafik Tasarımcı</p>
+            </div>
+        </div>
+    </section>
 
-.overlay {
-    background-color: rgba(0, 0, 0, 0.5);
-    width: 100%;
-    text-align: center;
-    padding: 20px;
-}
+    <!-- Oyunlar Bölümü -->
+    <section class="games">
+        <h2>Oyunlar</h2>
+        <div class="game-card">
+            <div class="game-img"></div>
+            <h3>Oyun 1</h3>
+            <p>Bir zamanlar efsane olan bir oyun!</p>
+            <a href="#">İndir</a>
+        </div>
+        <div class="game-card">
+            <div class="game-img"></div>
+            <h3>Oyun 2</h3>
+            <p>En çok oynanan retro oyunlardan biri.</p>
+            <a href="#">İndir</a>
+        </div>
+        <div class="game-card">
+            <div class="game-img"></div>
+            <h3>Oyun 3</h3>
+            <p>Nostaljik grafiklerle retro bir deneyim.</p>
+            <a href="#">İndir</a>
+        </div>
+    </section>
 
-nav {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px;
-}
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 ALTIN NESİL. Tüm hakları saklıdır.</p>
+    </footer>
 
-nav .logo {
-    font-size: 2rem;
-    color: #ffcc00; /* Altın renk */
-}
+    <script>
+        // Parallax Etkisi
+        window.addEventListener('scroll', function() {
+            let scrolled = window.scrollY;
+            let parallax = document.querySelector('.parallax-header');
+            parallax.style.backgroundPosition = 'center ' + (scrolled * 0.5) + 'px';
 
-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-    font-size: 1.2rem;
-    transition: color 0.3s;
-}
-
-nav a:hover {
-    color: #ffcc00;
-}
-
-.headline h1 {
-    font-size: 3rem;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
-    margin: 0;
-}
-
-.headline p {
-    font-size: 1.2rem;
-}
-
-/* Kişiler Bölümü */
-.team {
-    background-color: #222;
-    padding: 40px;
-    text-align: center;
-}
-
-.team h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-    color: #ffcc00;
-}
-
-.team-row {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-
-.team-card {
-    background-color: #333;
-    padding: 20px;
-    margin: 10px;
-    border-radius: 8px;
-    width: 200px;
-    text-align: center;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease;
-    color: #fff;
-}
-
-.team-card:hover {
-    transform: scale(1.05);
-    background-color: #444;
-}
-
-.team-img {
-    width: 100%;
-    height: 150px;
-    background-color: #555; /* Görsel yerine arka plan rengi */
-    border-radius: 50%;
-    margin-bottom: 15px;
-}
-
-.team-card h3 {
-    font-size: 1.5rem;
-    color: #ffcc00;
-    margin-top: 15px;
-}
-
-.team-card p {
-    font-size: 1rem;
-    color: #ccc;
-}
-
-/* Oyun Listesi */
-.games {
-    background-color: #222;
-    padding: 40px;
-    text-align: center;
-}
-
-.games h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-    color: #ffcc00;
-}
-
-.game-card {
-    background-color: #333;
-    padding: 20px;
-    margin: 20px;
-    border-radius: 8px;
-    display: inline-block;
-    width: 250px;
-    text-align: center;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease, background-color 0.3s ease;
-    color: #fff;
-}
-
-.game-card:hover {
-    transform: scale(1.05);
-    background-color: #444;
-}
-
-.game-img {
-    width: 100%;
-    height: 150px;
-    background-color: #555; /* Arka plan rengi */
-    margin-bottom: 15px;
-    border-radius: 8px;
-}
-
-.game-card h3 {
-    font-size: 1.5rem;
-    color: #ffcc00;
-    margin-top: 15px;
-}
-
-.game-card p {
-    font-size: 1rem;
-    color: #ccc;
-}
-
-.game-card a {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #ff5733;
-    color: white;
-    text-decoration: none;
-    margin-top: 10px;
-    border-radius: 5px;
-}
-
-.game-card a:hover {
-    background-color: #ff7844;
-}
-
-/* Footer */
-footer {
-    background-color: #222;
-    color: #777;
-    padding: 20px;
-    text-align: center;
-}
-
-/* Responsive Tasarım */
-@media screen and (max-width: 768px) {
-    .headline h1 {
-        font-size: 2.5rem;
-    }
-
-    .headline p {
-        font-size: 1.1rem;
-    }
-
-    .team-row {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .team-card {
-        width: 90%;
-        margin-bottom: 20px;
-    }
-
-    .games {
-        padding: 20px;
-    }
-
-    .game-card {
-        width: 90%;
-        margin: 10px 0;
-    }
-}
+            // Asya'nın paralel hareketi
+            let asyaCard = document.querySelector('.asya');
+            asyaCard.style.transform = 'translateY(' + (scrolled * 0.2) + 'px)';
+        });
+    </script>
+</body>
+</html>
