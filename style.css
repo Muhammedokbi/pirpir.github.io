@@ -94,7 +94,7 @@ nav a {
 
 .game-card h3 {
     font-size: 1.5rem;
-    color: #ffcc00; /* Ana renk */
+    color: #ffcc00;
 }
 
 .game-card p {
@@ -114,6 +114,38 @@ nav a {
 
 .game-card a:hover {
     background-color: #ff7844;
+}
+
+/* Öğretmen Bölümü */
+.teacher {
+    background-color: #333;
+    padding: 40px;
+    text-align: center;
+}
+
+.teacher-card {
+    background-color: #444;
+    padding: 20px;
+    border-radius: 8px;
+    display: inline-block;
+    width: 300px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.teacher-card img {
+    width: 100%;
+    border-radius: 8px;
+    height: auto;
+}
+
+.teacher-card h3 {
+    font-size: 2rem;
+    color: #ffcc00;
+}
+
+.teacher-card p {
+    font-size: 1.2rem;
+    color: #ccc;
 }
 
 /* Footer */
