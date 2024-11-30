@@ -8,7 +8,7 @@ body, html {
 
 /* Parallax Header */
 .parallax-header {
-    background-image: url('background-image.webp'); /* WebP formatında uygun bir arka plan görseli */
+    background-image: url('a.webp'); /* WebP formatında uygun bir arka plan görseli */
     background-position: center;
     background-attachment: fixed;
     background-size: cover;
