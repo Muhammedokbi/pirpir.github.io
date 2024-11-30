@@ -73,8 +73,11 @@
     </footer>
 
     <script>
-        // Parallax Etkisi Kaldırıldı
-        // Artık parallax efekti yok.
+        window.addEventListener('scroll', function() {
+            let scrolled = window.scrollY;
+            let parallax = document.querySelector('.parallax-header');
+            parallax.style.backgroundPosition = 'center ' + (scrolled * 0.5) + 'px';
+
     </script>
 </body>
 </html>
