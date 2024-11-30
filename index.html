@@ -3,37 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Parallax WebSite</title>
+    <title>Retro Oyun Arşivi</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-    <!-- Header Section -->
-    <header class="parallax">
-        <div class="logo">Logo</div>
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Service</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
-        <div class="headline">
-            <h1>Parallax Website</h1>
+    <!-- Parallax Arka Plan -->
+    <header class="parallax-header">
+        <div class="overlay">
+            <nav>
+                <div class="logo">Retro Logo</div>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Games</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="headline">
+                <h1>Retro Oyun Arşivi</h1>
+                <p>Geçmişin oyunlarına yolculuk yapın!</p>
+            </div>
         </div>
     </header>
 
-    <!-- Content Section -->
-    <section class="content">
-        <h2>About</h2>
-        <p>This is an example of a parallax effect website. The background moves slower than the foreground for a 3D effect.</p>
+    <!-- Oyun Listesi Bölümü -->
+    <section class="games">
+        <h2>Oyunlar</h2>
+        <div class="game-card">
+            <img src="game1.png" alt="Oyun 1">
+            <h3>Oyun 1</h3>
+            <p>Bu oyun çok eski ama hala efsane!</p>
+            <a href="#">İndir</a>
+        </div>
+        <div class="game-card">
+            <img src="game2.png" alt="Oyun 2">
+            <h3>Oyun 2</h3>
+            <p>Bir zamanlar en çok oynanan oyunlardan biri.</p>
+            <a href="#">İndir</a>
+        </div>
+        <div class="game-card">
+            <img src="game3.png" alt="Oyun 3">
+            <h3>Oyun 3</h3>
+            <p>İçerdiği nostaljik grafiklerle retro bir deneyim sunuyor.</p>
+            <a href="#">İndir</a>
+        </div>
     </section>
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2024 Parallax Website. All rights reserved.</p>
+        <p>&copy; 2024 Retro Oyun Arşivi. Tüm hakları saklıdır.</p>
     </footer>
-
 </body>
 </html>
