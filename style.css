@@ -1,94 +1,125 @@
-/* Genel stil ayarları */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+/* Genel Ayarlar */
+body, html {
     margin: 0;
     padding: 0;
-}
-
-/* Header kısmı */
-header {
-    background-color: #333;
+    font-family: 'Press Start 2P', sans-serif;
     color: white;
-    padding: 20px;
-    text-align: center;
 }
 
-h1 {
-    margin: 0;
-    font-size: 2.5em;
-}
-
-/* Oyun kartları için container */
-.game-container {
+/* Parallax Header */
+.parallax-header {
+    background-image: url('your-background-image.jpg');
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 100vh;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    text-align: center;
     padding: 20px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+nav .logo {
+    font-size: 2rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
     gap: 20px;
 }
 
-/* Oyun öğeleri */
-.game-item {
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 250px;
-    padding: 15px;
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.headline h1 {
+    font-size: 4rem;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+    margin: 0;
+}
+
+.headline p {
+    font-size: 1.5rem;
+}
+
+/* Oyun Listesi */
+.games {
+    background-color: #222;
+    padding: 40px;
     text-align: center;
+}
+
+.games h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.game-card {
+    background-color: #333;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 8px;
+    display: inline-block;
+    width: 250px;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease;
 }
 
-/* Hover efekti */
-.game-item:hover {
-    transform: scale(1.05);
+.game-card:hover {
+    transform: scale(1.1);
 }
 
-/* Oyun resimlerinin stili */
-.game-item img {
+.game-card img {
     width: 100%;
-    height: auto;
     border-radius: 8px;
+    height: auto;
 }
 
-/* Oyun başlıkları */
-.game-title {
-    font-size: 1.4em;
-    margin-top: 10px;
-    color: #333;
+.game-card h3 {
+    font-size: 1.5rem;
+    color: #ffcc00; /* Ana renk */
 }
 
-/* Oyun açıklamaları */
-.game-description {
-    font-size: 1em;
-    color: #666;
-    margin-top: 10px;
+.game-card p {
+    font-size: 1rem;
+    color: #ccc;
 }
 
-/* Oyun başlatma butonu */
-.game-item a {
-    display: block;
-    margin-top: 15px;
-    padding: 10px;
-    background-color: #007BFF;
+.game-card a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ff5733;
     color: white;
     text-decoration: none;
+    margin-top: 10px;
     border-radius: 5px;
-    font-weight: bold;
 }
 
-/* Buton hover efekti */
-.game-item a:hover {
-    background-color: #0056b3;
+.game-card a:hover {
+    background-color: #ff7844;
 }
 
-/* Footer kısmı */
+/* Footer */
 footer {
-    background-color: #333;
-    color: white;
+    background-color: #222;
+    color: #777;
+    padding: 20px;
     text-align: center;
-    padding: 10px;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
 }
