@@ -7,14 +7,11 @@ body, html {
     height: 100%;
 }
 
-/* Parallax Header */
+/* Parallax Header (Parallax Efekti Kaldırıldı) */
 .parallax-header {
     position: relative;
-    height: 100vh; /* Yükseklik ekranın tamamını kapsar */
-    background-color: #333; /* Görsel yerine arka plan rengi */
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
+    height: 100vh;
+    background-color: #333; /* Arka plan rengi */
     color: white;
     text-align: center;
     display: flex;
@@ -38,7 +35,7 @@ nav {
 
 nav .logo {
     font-size: 2rem;
-    color: #ffcc00; /* Altın renk */
+    color: #ffcc00;
 }
 
 nav ul {
@@ -123,6 +120,11 @@ nav a:hover {
     color: #ccc;
 }
 
+.asya {
+    position: relative; /* Sabit kalacak */
+    z-index: 1; /* Diğer kartlarla aynı hizada */
+}
+
 /* Oyun Listesi */
 .games {
     background-color: #222;
@@ -193,34 +195,4 @@ footer {
     color: #777;
     padding: 20px;
     text-align: center;
-}
-
-/* Responsive Tasarım */
-@media screen and (max-width: 768px) {
-    .headline h1 {
-        font-size: 2.5rem;
-    }
-
-    .headline p {
-        font-size: 1.1rem;
-    }
-
-    .team-row {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .team-card {
-        width: 90%;
-        margin-bottom: 20px;
-    }
-
-    .games {
-        padding: 20px;
-    }
-
-    .game-card {
-        width: 90%;
-        margin: 10px 0;
-    }
 }
