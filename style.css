@@ -8,17 +8,13 @@ body, html {
 }
 
 /* Parallax Header */
-body {
-    background-color: #222;
-}
-
 .parallax-header {
     position: relative;
     height: 100vh; /* Yükseklik ekranın tamamını kapsar */
-    background-image: url('DALL·E-2024-11-30-23.22.png'); /* Burada PNG dosyanızın yolunu belirtin */
+    background-image: url('DALL·E-2024-11-30-23.22.png'); /* Görselin yolu */
     background-size: cover;  /* Görselin sayfayı kaplamasını sağlar */
     background-position: center;  /* Görselin ortalanmasını sağlar */
-    background-attachment: fixed; /* Görselin sabit kalmasını sağlar (Parallax Efekti) */
+    background-attachment: fixed; /* Parallax Efekti */
     background-repeat: no-repeat;  /* Görselin tekrar etmesini engeller */
     color: white;
     text-align: center;
@@ -64,13 +60,13 @@ nav a:hover {
 }
 
 .headline h1 {
-    font-size: 4rem;
+    font-size: 3rem;
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
     margin: 0;
 }
 
 .headline p {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
 }
 
 /* Kişiler Bölümü */
@@ -92,7 +88,7 @@ nav a:hover {
     margin: 20px;
     border-radius: 8px;
     display: inline-block;
-    width: 250px;
+    width: 200px;
     text-align: center;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease;
@@ -100,14 +96,14 @@ nav a:hover {
 }
 
 .team-card:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
     background-color: #444;
 }
 
 .team-img {
     width: 100%;
     height: 150px;
-    background-color: #555; /* Boşluk için arka plan rengi */
+    background-color: #555; /* Görsel yerine arka plan rengi */
     border-radius: 50%;
     margin-bottom: 15px;
 }
@@ -121,13 +117,6 @@ nav a:hover {
 .team-card p {
     font-size: 1rem;
     color: #ccc;
-    margin: 5px 0;
-}
-
-.description {
-    font-size: 0.9rem;
-    color: #aaa;
-    margin-top: 10px;
 }
 
 /* Oyun Listesi */
@@ -157,14 +146,14 @@ nav a:hover {
 }
 
 .game-card:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
     background-color: #444;
 }
 
 .game-img {
     width: 100%;
     height: 150px;
-    background-color: #555; /* Arka plan görseli yerine boşluk için renk */
+    background-color: #555; /* Arka plan rengi */
     margin-bottom: 15px;
     border-radius: 8px;
 }
